@@ -1,7 +1,7 @@
 import  { Button } from './components/Button/Button';
 import  { Edit } from './components/Edit/Edit';
 import  { Input } from './components/Input/Input';
-import  { Todo } from './components/Input/Input';
+import  { Todo } from './components/Todo/Todo';
 import { useState } from 'react';
 import './App.css';
 import React from 'react';
@@ -30,6 +30,26 @@ function App() {
         setInputText("");
     }
 
+    const onRadioClick = (activeId) => {
+        let newArr = [...todoArr];
+        newArr = newArr.map(elem => {
+            if (elem.id === activeId) {
+                return {
+                    "text" : elem.text,
+                    "id" : elem.id,
+                    "isDone" : !elem.isDone
+                }
+            } else return elem;
+        })
+        setTodoArr(newArr);
+    }
+
+    const onCrossClick = (clickedId) => {
+        let newArr = [...todoArr];
+        newArr = newArr.filter(elem => elem.id !== clickedId)
+        setTodoArr(newArr);
+    }
+
     const clearButton = () => {
         if (todoArr.length > 0) {
             let isConfirmed = window.confirm("Are you sure you want to delete ALL the items in the list?");
@@ -42,6 +62,76 @@ function App() {
     const activeButtonHandler = (id) => {
         setActiveControl(id);        
         setLengthTitle(id) 
+    }
+
+    const doubleClickHandler = (id) => {
+        setEditId(id);
+    }
+
+    const onSaveClick = (text) => {
+        let newArr = [...todoArr];
+        newArr = newArr.map(elem => {
+            if (elem.id === editId) {
+                let newElem = {...elem}
+                newElem.text = text
+                return newElem;
+            } else return elem;
+        })
+        setTodoArr(newArr);
+        setEditId("");
+    }
+
+    const onCancelClick = () => {
+        setEditId("");
+    }
+
+    const renderList = () => {
+        let list = [];
+        switch(true) {
+            case activeControl === "all": 
+                list = [...todoArr]
+                break;
+
+            case activeControl === "done": 
+                list = [...todoArr.filter(elem => elem.isDone )]
+                break;
+
+            case activeControl === "pending": 
+                list = [...todoArr.filter(elem => !elem.isDone )]
+                break;
+
+            default:
+                list = [...todoArr];
+                break;
+        }
+
+        localStorage.setItem("userList", JSON.stringify(list));
+        
+        return(
+            <div className="items-area">
+                    {list.map(elem  => {
+                        return (
+                            elem.id === editId ? 
+                            <Edit 
+                                key={elem.id}
+                                onSaveClick={onSaveClick}
+                                onCancelClick={onCancelClick}
+                                innerText={elem.text}
+                            />
+                            :
+                            <Todo 
+                                isActiveTodo={elem.isDone}
+                                onRadioClick={onRadioClick}
+                                onCrossClick={onCrossClick}
+                                innerText={elem.text}
+                                id={elem.id}
+                                key={elem.id}
+                                onDoubleClick={() => {doubleClickHandler(elem.id)}}
+                            /> 
+                        )
+                    })}
+            </div>
+        )
     }
 
     return (
@@ -95,7 +185,7 @@ function App() {
                         />
                     </div>
 
-                    {/* {renderList()} */}
+                    {renderList()}
                 </div>
         </div>
     </div>
