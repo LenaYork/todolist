@@ -1,0 +1,53 @@
+.edit {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #08e3e3;
+}
+
+.edit-input {
+    width: 70%;
+}
+
+.save-edit-box {
+    border: 1px solid #78f078;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 35px;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.save-edit-box:hover {
+    cursor: pointer;
+    background-color: #78f078;
+}
+
+.save-edit-box:active {
+    color: white;
+    background-color: #086b08;
+}
+
+.cancel-edit-box {
+    border: 1px solid #ea7474;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 35px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-edit-box:hover {
+    cursor: pointer;
+    background-color: #ea7474;
+}
+
+.cancel-edit-box:active {
+    color: white;
+    background-color: #ae0b0b;
+}

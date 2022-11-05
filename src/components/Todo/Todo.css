@@ -1,0 +1,46 @@
+.todo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 5px solid #08e3e3;
+}
+
+.delete-todo-box {
+    border: 1px solid red;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 35px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.delete-todo-box:hover {
+    cursor: pointer;
+    background-color: #ea7474;
+}
+
+.delete-todo-box:active {
+    color: white;
+    background-color: #ae0b0b;
+}
+
+.todo-text {
+    width: 600px;
+    margin-left: 10px;
+}
+
+.active-todo {
+    height: 70px;
+    border-radius: 15px;
+    background-color: aqua;
+}
+
+.todo-checkbox {
+    width: 25px;
+    height: 25px;
+}
