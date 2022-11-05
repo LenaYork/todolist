@@ -11,3 +11,5 @@ Each option shows the amount of plans.
 Local storage is used for data storage so that a user can see their plans after page reload.
 
 code: https://github.com/LenaYork/todolist
+
+demo: https://lenayork.github.io/todolist/
