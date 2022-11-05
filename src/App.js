@@ -2,7 +2,7 @@ import  { Button } from './components/Button/Button';
 import  { Edit } from './components/Edit/Edit';
 import  { Input } from './components/Input/Input';
 import  { Todo } from './components/Todo/Todo';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import React from 'react';
 
@@ -12,6 +12,32 @@ function App() {
     const [ activeControl, setActiveControl ] = useState("all");
     const [ lengthTitle, setLengthTitle ] = useState("all");
     const [ editId, setEditId ] = useState("");
+
+    useEffect(() => {
+        document.querySelector(".total-number").innerHTML = countLength(todoArr, activeControl);
+    }, [todoArr, activeControl ])
+
+    const  countLength= (initialArr, activeButton) => {
+        let num = 0;
+        switch(true) {
+            case activeButton === "all": 
+                num = initialArr.length;
+                break;
+
+            case activeButton === "done": 
+                num = initialArr.filter(elem => elem.isDone).length;
+                break;
+
+            case activeButton === "pending": 
+                num = initialArr.filter(elem => !elem.isDone ).length;
+                break;
+
+            default:
+                num = initialArr.length;
+                break;
+        }
+        return num;
+    }
 
     const inputOnChange = (event) => {
         setInputText(event.target.value);
