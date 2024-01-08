@@ -1,7 +1,15 @@
 .input {
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
     width: 500px;
-    font-weight: bolder;
-    color: #088b8b;
+    font-weight: 800;
+    color: #0ecccc;
+    border: none;
+    outline: 2px solid aquamarine;
+}
+
+.input:focus {
+    outline: 3px solid aquamarine;
+    /* font-weight: 800; */
+    color: #038585;
 }

@@ -24,7 +24,6 @@ export const Todo = (props) => {
                 className="delete-todo-box" 
                 onClick={() => onCrossClick(id)}
                 >
-                    X
             </div>
         </div>
     )

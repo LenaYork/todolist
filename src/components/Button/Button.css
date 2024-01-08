@@ -1,8 +1,9 @@
 .button {
-    border-radius: 15px;
+    width: 90px;
     box-sizing: border-box;
     font-weight: bold;
     color:#534e48;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 .button:hover {
@@ -10,18 +11,18 @@
 }
 
 .button:active {
-    outline: 1px solid #042728;
+    transform: scale(105%);
 }
 
 .control-button {
     padding: 4px 10px;
     text-align: center;
     color: #b4cfd4;
-    background-color: #276827;
+    background-color: #2b972b;
 }
 
 .control-button:hover {
-    background-color: #4d894d;
+    background-color: #4ec84e;
 }
 
 .clear-button {
@@ -53,16 +54,20 @@
 
 .add-button {
     height: 40px;
-    padding: 4px 20px;
+    padding: 7px 20px;
+    border-radius: 10px;
     color:#344244;
     background-color: aquamarine;
+    transition: 0.3s;
 }
 
 .add-button:hover {
-    background-color: aqua;
+    background-color: #b6ffe7;
     cursor: pointer;
 }
 
 .add-button:active {
-    outline: 2px solid rgb(2, 197, 197);
+    /* outline: 2px solid rgb(2, 197, 197); */
+    background-color: #19e3a0;
+    transform: scale(101%);
 }

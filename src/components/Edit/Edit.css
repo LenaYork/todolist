@@ -12,7 +12,7 @@
 
 .save-edit-box {
     border: 1px solid #78f078;
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: bold;
     font-size: 35px;
     color: green;
@@ -33,7 +33,7 @@
 
 .cancel-edit-box {
     border: 1px solid #ea7474;
-    border-radius: 15px;
+    border-radius: 10px;
     font-weight: bold;
     font-size: 35px;
     color: red;
