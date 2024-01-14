@@ -1,53 +1,69 @@
 .edit {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 5px solid #08e3e3;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid #08e3e3;
 }
 
 .edit-input {
-    width: 70%;
+  width: 90%;
+  padding: 5px;
+  border: none;
+  outline: 1px solid silver;
+  border-radius: 8px;
+  color: grey;
+}
+
+.edit-input:focus {
+  outline: 2px solid #08e3e3;
+  color: black;
 }
 
 .save-edit-box {
-    border: 1px solid #78f078;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 35px;
-    color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1%;
+  background: url("../../../public/confirm-icon.svg") center/25px no-repeat;
+  transition: 0.3s;
 }
 
 .save-edit-box:hover {
-    cursor: pointer;
-    background-color: #78f078;
-}
-
-.save-edit-box:active {
-    color: white;
-    background-color: #086b08;
+  cursor: pointer;
+  background: url("../../../public/confirm-icon-hover.svg") center/25px no-repeat;
 }
 
 .cancel-edit-box {
-    border: 1px solid #ea7474;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 35px;
-    color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../public/close-icon.svg") center/25px no-repeat;
+  transition: 0.3s;
 }
 
 .cancel-edit-box:hover {
-    cursor: pointer;
-    background-color: #ea7474;
+  cursor: pointer;
+  background: url("../../../public/close-icon_hover.svg") center/25px no-repeat;
 }
 
-.cancel-edit-box:active {
-    color: white;
-    background-color: #ae0b0b;
+@media (max-width: 650px) {
+  .edit-input {
+    width: 75vw;
+    font-size: 20px;
+  }
+
+  .delete-todo-box {
+    width: 35px;
+    height: 35px;
+    background: url("../../../public/delete-icon.svg") center/35px no-repeat;
+  }
+
+  .delete-todo-box:hover {
+    background: url("../../../public/delete-icon-hover.svg") center/35px no-repeat;
+  }
 }

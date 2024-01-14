@@ -1,15 +1,22 @@
 .input {
-    border-radius: 8px;
-    padding: 10px;
-    width: 500px;
-    font-weight: 800;
-    color: #0ecccc;
-    border: none;
-    outline: 2px solid aquamarine;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 10px;
+  width: 500px;
+  font-weight: 800;
+  color: #0ecccc;
+  border: none;
+  outline: 2px solid aquamarine;
 }
 
 .input:focus {
-    outline: 3px solid aquamarine;
-    /* font-weight: 800; */
-    color: #038585;
+  outline: 3px solid aquamarine;
+  color: #038585;
+}
+
+@media (max-width: 650px) {
+  .input {
+    width: 80vw;
+    font-size: 16px;
+  }
 }

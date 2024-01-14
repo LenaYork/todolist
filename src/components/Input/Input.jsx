@@ -1,16 +1,15 @@
 import "./Input.css";
 
-export const Input = (props) => {
+export const Input = ({ onChange, value, handleInputKeyUp }) => {
 
-    const {onChange, value} = props;
-
-    return (
-        <input 
-            className="input" 
-            id="input"
-            value={value}
-            onChange={onChange}
-        >
-        </input>
-    )
+  return (
+    <input
+      className="input"
+      id="input"
+      value={value}
+      onChange={onChange}
+      onKeyUp={handleInputKeyUp}
+    >
+    </input>
+  )
 }

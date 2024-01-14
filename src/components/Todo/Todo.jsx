@@ -1,30 +1,28 @@
 import "./Todo.css";
 
-export const Todo = (props) => {
+export const Todo = ({isActiveTodo, innerText, onRadioClick, onCrossClick, onDoubleClick, id}) => {
 
-    const { isActiveTodo, innerText, onRadioClick, onCrossClick, onDoubleClick, id } = props;
+  const isActive = isActiveTodo ? "active-todo" : "";
 
-    const isActive = isActiveTodo ? "active-todo" : "";
-
-    return(
-        <div className={`todo ${isActive}`} id={id}>
-            <input 
-                type="checkbox" 
-                checked={isActive}
-                onChange={() => onRadioClick(id)}
-                className="todo-checkbox"
-                />
-            <p 
-                className="todo-text" 
-                onDoubleClick={onDoubleClick}
-                >
-                    {innerText}
-            </p>
-            <div 
-                className="delete-todo-box" 
-                onClick={() => onCrossClick(id)}
-                >
-            </div>
-        </div>
-    )
+  return (
+    <div className={`todo ${isActive}`} id={id}>
+      <input
+        type="checkbox"
+        checked={isActive}
+        onChange={() => onRadioClick(id)}
+        className="todo-checkbox"
+      />
+      <p
+        className="todo-text"
+        onDoubleClick={onDoubleClick}
+      >
+        {innerText}
+      </p>
+      <div
+        className="delete-todo-box"
+        onClick={() => onCrossClick(id)}
+      >
+      </div>
+    </div>
+  )
 }
