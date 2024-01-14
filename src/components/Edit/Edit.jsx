@@ -25,6 +25,7 @@ export const Edit = ({onSaveClick, onCancelClick, innerText}) => {
         value={activeText}
         onChange={onChangeHandler}
         onKeyUp={handleEditInputKeyUp}
+        maxLength={90}
       />
       <div
         className="save-edit-box"

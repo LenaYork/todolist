@@ -9,6 +9,7 @@ export const Input = ({ onChange, value, handleInputKeyUp }) => {
       value={value}
       onChange={onChange}
       onKeyUp={handleInputKeyUp}
+      maxLength={90}
     >
     </input>
   )
