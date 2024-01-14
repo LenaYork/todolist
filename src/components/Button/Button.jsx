@@ -2,7 +2,8 @@ import "./Button.css";
 
 export const Button = ({innerText, onClick, className, id, activeControl }) => {
 
-  const isActiveControl = id === activeControl ? "active-control-button" : "";
+  let isActiveControl = id === activeControl ? "active-control-button" : "";
+  id === "done" && (isActiveControl += "done-button");
 
   return (
     <div

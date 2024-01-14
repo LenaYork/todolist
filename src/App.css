@@ -92,6 +92,7 @@
     flex-direction: column;
     height: 90px;
     align-items: center;
+    margin-bottom: 15px;
   }
 
   .buttons-container .control-button, .clear-button {

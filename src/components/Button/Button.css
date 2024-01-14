@@ -71,6 +71,10 @@
   transform: scale(101%);
 }
 
+.done-button {
+  border-right: 1px solid #24a91c;
+}
+
 @media (max-width: 650px) {
   .add-button {
     width: 80vw;
