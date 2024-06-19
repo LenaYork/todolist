@@ -75,6 +75,16 @@
   border-right: 1px solid #24a91c;
 }
 
+@media (min-width: 650px) {
+  .control-button {
+    box-shadow: 4px 5px 5px 0px #18972da3;
+  }
+
+  .clear-button {
+    box-shadow: 4px 5px 5px 0px #ed6767;
+  }
+}
+
 @media (max-width: 650px) {
   .add-button {
     width: 80vw;

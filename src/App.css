@@ -87,6 +87,12 @@
   }
 }
 
+@media (min-width: 650px) {
+  .total-number {
+    box-shadow: 4px 5px 5px 0px #607263a3;
+  }
+}
+
 @media (max-width: 650px) {
   .input-area {
     flex-direction: column;
@@ -95,7 +101,8 @@
     margin-bottom: 15px;
   }
 
-  .buttons-container .control-button, .clear-button {
+  .buttons-container .control-button,
+  .clear-button {
     height: 50px;
     display: flex;
     justify-content: center;
@@ -110,5 +117,17 @@
     align-items: center;
     font-size: 23px;
     padding: 3px 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .buttons-area {
+    margin: 15px 0;
+  }
+
+  .buttons-container {
+    height: unset;
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
 }
