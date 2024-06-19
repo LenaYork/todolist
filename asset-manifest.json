@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/todolist/static/css/main.78ea7de8.css",
+    "main.js": "/todolist/static/js/main.be190383.js",
+    "static/js/787.97a945da.chunk.js": "/todolist/static/js/787.97a945da.chunk.js",
+    "static/media/close-icon.svg": "/todolist/static/media/close-icon.aabbe5e88748a8b3f147.svg",
+    "static/media/close-icon_hover.svg": "/todolist/static/media/close-icon_hover.c4270713d0f53bd3b2a9.svg",
+    "static/media/delete-icon.svg": "/todolist/static/media/delete-icon.ad08f363ed1ad1a8becb.svg",
+    "static/media/delete-icon-hover.svg": "/todolist/static/media/delete-icon-hover.72cbd9b06eafe02f2ab6.svg",
+    "static/media/confirm-icon-hover.svg": "/todolist/static/media/confirm-icon-hover.03622dc386e1642677d5.svg",
+    "static/media/confirm-icon.svg": "/todolist/static/media/confirm-icon.72b935c3bd033a6cdd24.svg",
+    "index.html": "/todolist/index.html",
+    "main.78ea7de8.css.map": "/todolist/static/css/main.78ea7de8.css.map",
+    "main.be190383.js.map": "/todolist/static/js/main.be190383.js.map",
+    "787.97a945da.chunk.js.map": "/todolist/static/js/787.97a945da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78ea7de8.css",
+    "static/js/main.be190383.js"
+  ]
+}
